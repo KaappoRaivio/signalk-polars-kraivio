@@ -1,0 +1,20 @@
+{
+  "name": "signalk-polars-kraivio",
+  "version": "0.0.1",
+  "description": "A plugin for calculating boat performance based on polar and instrument readings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "signalk-node-server-plugin"
+  ],
+  "author": "Kaappo Raivio",
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.10.2"
+  },
+  "peerDependencies": {
+    "underscore": "^1.10.2"
+  }
+}
