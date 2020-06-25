@@ -1,4 +1,3 @@
-const {_} = require("./node_modules/underscore/underscore.js");
 const { getPolarFunction } = require("./polar.js");
 
 
@@ -54,7 +53,8 @@ module.exports = function (app) {
     }
 
     const propagateIfAllValuesPresent = (state, callback) => {
-        const allValuesPresent = _.all(Object.values(state).map(x => x !== null));
+        // const allValuesPresent = _.all(Object.values(state).map(x => x !== null));
+        const allValuesPresent = Object.values(state).map(x => x !== null).reduce((a, b) => a && b);
         if (allValuesPresent) {
             callback(state);
         }
