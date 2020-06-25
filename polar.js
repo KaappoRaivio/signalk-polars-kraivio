@@ -17,7 +17,7 @@ exports.getPolarFunction = path => {
 
     for (let y = 0; y < definedWindSpeeds.length; y++) {
         for (let x = 0; x < definedWindAngles.length; x++) {
-            polar[definedWindSpeeds[y]][definedWindAngles[x]] = rawPolarData[x][y] || 0;
+            polar[definedWindSpeeds[y]][definedWindAngles[x]] = rawPolarData[x][y] / 1.852 || 0;
         }
     }
 
@@ -58,7 +58,6 @@ exports.getPolarFunction = path => {
             lowerAngle: polarSpeedMatrix.lowerAngle.upperSpeed * speedPercentage
                 + polarSpeedMatrix.lowerAngle.lowerSpeed * (1 - speedPercentage)
         }
-        // console.log(polarSpeedMatrix, speedPercentage, anglePercentage)
 
         return polarSpeedAngles.lowerAngle * (1 - anglePercentage)
             + polarSpeedAngles.upperAngle * anglePercentage
