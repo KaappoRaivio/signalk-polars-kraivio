@@ -11,7 +11,5 @@
   ],
   "author": "Kaappo Raivio",
   "license": "ISC",
-  "dependencies": {
-
-  },
+  "dependencies": {}
 }
