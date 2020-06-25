@@ -5,9 +5,9 @@ const { getPolarFunction } = require("./polar.js");
 module.exports = function (app) {
     var plugin = {};
 
-    plugin.id = 'singalk-polars-kraivio';
-    plugin.name = 'Polars';
-    plugin.description = 'Plugin that does stuff';
+    plugin.id = 'signalk-polars-kraivio';
+    plugin.name = 'signalk-polars-kraivio';
+    plugin.description = "Calculates polar data based on the provided polar csv data file, and the vessel's speed, the current wind speed and the current wind angle.";
 
     plugin.publishDeltas = function (polarSpeed, polarPercentage) {
         app.handleMessage(plugin.id, {
@@ -92,7 +92,6 @@ module.exports = function (app) {
     };
 
     plugin.stop = function () {
-        // Here we put logic we need when the plugin stops
         app.debug('Plugin stopped');
         unsubscribes.forEach(f => f());
         unsubscribes = [];
